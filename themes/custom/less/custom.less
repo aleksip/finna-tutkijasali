@@ -1,0 +1,109 @@
+.alert {
+  border-radius: 5px;
+}
+
+.template-dir-search.template-name-home .r2-info {
+  .r2-restricted-record-register {
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+  }
+} 
+
+.list-decimal {
+  font-size: 16px;
+  line-height: 1.5;
+  padding-left: 1.2em;
+  padding-bottom: .9em;
+  > li {
+    list-style-type: decimal;
+  }   
+}
+.introduction-text{
+  background-color: @brand-primary;
+  position: relative;
+  display: inline-block;
+  max-width: 450px;
+  padding: 1.5em;
+  border-radius: 5px 5px 5px 0px;
+  margin-bottom: 1em;
+  margin-top: 2em;
+}
+ .introduction h3{
+    text-shadow: none;
+}
+.introduction-text :before{content:"";position:absolute;bottom:-12px;margin:auto;left:0;border-width:0 0 12px 12px;border-style:solid;border-color:transparent @brand-primary;}
+.template-dir-search.template-name-home .search-form-container {
+  padding-top: 7em;
+  padding-bottom: 7em;
+}
+.template-dir-search.template-name-home .searchContent {
+    background-position: center center;
+}
+
+.main.template-dir-content.template-name-content {
+  .mainbody .content-section h2 {
+    font-size: 21px;      
+  }
+  .tutkijasali-banner .grey {
+    background-color: #f7f7f7;
+    display: flex;
+    margin-left: calc(~"-50vw + 50%");
+    margin-right: calc(~"-50vw + 50%");
+    padding-top: 10px;
+    .r2-restricted-record-register.alert-info {
+      background: none;
+      padding: 0;
+    }
+    .img-wrapper {
+      position: relative;
+      display: inline-block;
+      box-shadow: 0px 5px 5px rgba(1,1,1,0.1);
+      .text {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        color: #fff;
+        background-color: rgba(0,0,0,0.7);
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 8px;
+      }
+    }
+  }
+  .panel .panel-heading .panel-title {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.5em;
+    a {
+      width: 100%;
+      display: block;
+      &.collapsed {
+        .close-icon {
+          display: none;
+        }
+        .open-icon {
+          display: initial;
+        }
+      }
+      .open-icon {
+        display: none;
+      }
+      .close-icon {
+        display: initial;
+      }
+    }
+  }
+}
+
+
+// content-navigation-menu
+.main.template-dir-content.template-name-content .content-navigation-menu {
+  @media (min-width:@screen-sm-min) and (max-width: @screen-sm-max) {
+    &.attached {
+      max-width: 20%;
+    }
+  }
+}

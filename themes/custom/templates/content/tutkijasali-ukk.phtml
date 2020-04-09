@@ -1,0 +1,58 @@
+<!-- START of: custom - content/tutkijasali-ukk_fi.phtml -->
+<?php $this->headTitle($this->translate('R2_menu_heading'));?>
+<?php if ($this->resolver('tutkijasaliBegin_fi.phtml')): ?>
+  <?=$this->render('tutkijasaliBegin_fi.phtml')?>
+<?php endif; ?>
+<?php if ($this->resolver('content/tutkijasali-tabs.phtml')): ?>
+  <?=$this->render('content/tutkijasali-tabs.phtml', ['activeTab' => 'tutkijasali-ukk'])?>
+<?php endif; ?>
+<div class="mainbody">
+  <h2>Usein kysytyt kysymykset</h2>
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingOne">
+        <h3 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <i class="fa fa-arrow-down open-icon"></i>
+            <i class="fa fa-arrow-up close-icon"></i>
+            Aineistot ovat monipuolisia ja luotettavia
+          </a>
+        </h3>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+        <div class="panel-body">
+          <p>Finna tarjoaa luotettavia ja valikoituja sisältöjä, joista vastaavat alan ammattilaiset arkistoissa, museoissa ja kirjastoissa.
+          </p>
+          <p>Löydät Finnasta esimerkiksi yli 1,3 miljoonaa historiallista valokuvaa. Kuvia on ihmisistä, paikoista, taideteoksista ja esineistä eri vuosisadoilta.
+          </p>
+          <p>Finnassa on myös paljon muita kiinnostavia aineistoja, kuten elokuvia, vanhoja karttoja, taidetta, äänitteitä, digitoituja lehtiä, kirjeitä ja muuta kirjallista aineistoa - oikeastaan kaikkea sitä, mikä elävöittää ja täydentää oppituntiasi.
+          </p>
+          <p>Aineistot soveltuvat melkein mihin oppiaineeseen tahansa. Niiden avulla voit helposti ideoida myös monialaisia oppimiskokonaisuuksia.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingTwo">
+        <h3 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <i class="fa fa-arrow-down open-icon"></i>
+            <i class="fa fa-arrow-up close-icon"></i>
+            Aineistojen käyttö osana opetusta vahvistaa monilukutaitoa ja kriittistä ajattelua
+          </a>
+        </h3>
+      </div>
+      <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+        <div class="panel-body">
+          <p>Finna soveltuu erinomaisesti monilukutaidon opettamiseen. Hakupalvelussa pääset käsiksi eri oppiaineille ja tieteenaloille ominaisiin aineistoihin.
+          </p>
+          <p>Saat samasta aiheesta ja teemasta yhdellä haulla esille useita eri mediasisältöjä ja vieläpä eri näkökulmista: kirjoitettua aineistoa, erilaisia painettuja julkaisuja, tietoa esineistä ja monenlaista ääni- ja kuva-aineistoa.
+          </p>
+          <p>Näiden erilaisten aineistojen hyödyntäminen oppitunneilla syventää laaja-alaista käsitystä tekstistä, tukee kriittistä ajattelua ja ohjaa oppilasta monipuolisten tietolähteiden käyttöön.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END of: custom - content/tutkijasali-ukk_fi.phtml -->

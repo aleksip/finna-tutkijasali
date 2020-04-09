@@ -1,0 +1,21 @@
+<!-- START of: finna - search/home/home-1.phtml -->
+<div class="container">
+  <div class="col-sm-6">
+    <h2>Lorem ipsum</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <ul class="list-bullets">
+        <li><a href="<?=$this->url('content-page', ['page' => 'tutkijasali'])?>">Mikä on Finnan tutkijasali?</a></li>
+        <li><a href="<?=$this->url('content-page', ['page' => 'tutkijasali'])?>">Mikä on AHAA?</a></li>
+        <li><a href="<?=$this->url('content-page', ['page' => 'tutkijasali'])?>">Ketkä ovat mukana?</a></li>
+    </ul>
+  </div>
+  <div class="col-sm-6 r2-info">
+    <h2>Finnan tutkijasali</h2>
+    <?php if ($this->R2()->isRegistered() && $this->R2()->hasUserAccess(true)): ?>
+        <?= $this->R2RestrictedRecordRegistered(null, ['user' => $this->auth()->isLoggedIn()])?>
+    <?php else: ?>
+        <?= $this->R2RestrictedRecordRegister(null, ['user' => $this->auth()->isLoggedIn(), 'ignoreCache' => true])?>
+    <?php endif; ?>
+  </div>
+</div>
+<!-- END of: finna - search/home/home-1.phtml -->
