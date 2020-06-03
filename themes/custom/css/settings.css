@@ -11,4 +11,4 @@
 *********************************************************************************/
 
 body {background-image: none !important;}
-.template-dir-search.template-name-home .searchContent {background-repeat: no-repeat;background-size: cover;background-image: url("http://127.0.0.1/vufind-ndl/themes/custom/images/logo_background.jpg");}
+.template-dir-search.template-name-home .searchContent {background-repeat: no-repeat;background-size: cover;background-image: url("/tutkijasali/themes/custom/images/logo_background.png");}

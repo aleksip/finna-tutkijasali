@@ -1,0 +1,7 @@
+<!-- START of: finna - layout/Additions/header-post.phtml -->
+<?php if ($this->layout()->templateName === 'home' && $this->layout()->templateDir === 'search'): ?>
+  <div>
+    <?= $this->R2RestrictedRecordRegistered(null, ['user' => $this->auth()->isLoggedIn()])?>
+  </div>
+<?php endif ?>
+<!-- END of: finna - layout/Additions/header-post.phtml -->

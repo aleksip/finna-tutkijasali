@@ -2,11 +2,25 @@
   border-radius: 5px;
 }
 
-.template-dir-search.template-name-home .r2-info {
-  .r2-restricted-record-register {
-    padding: 0;
-    background-color: #fff;
-    color: #000;
+.system-messages {
+    background-color: #F2DEDE;
+}
+
+.template-dir-search.template-name-home {
+  .r2-restricted-record-registered {
+      margin: 0;
+      padding: 5px;
+      justify-content: center;
+      i {
+        font-size: 1.8em;
+      }
+  }
+  .r2-info {
+      .r2-restricted-record-register {
+          padding: 0;
+          background-color: #fff;
+          color: #000;
+      }
   }
 } 
 
@@ -42,6 +56,14 @@
 }
 
 .main.template-dir-content.template-name-content {
+
+  .content-navigation-menu h2 {
+    text-transform: initial;
+    a {
+      color: #000;
+    }
+  }
+    
   .mainbody .content-section h2 {
     font-size: 21px;      
   }
@@ -106,4 +128,28 @@
       max-width: 20%;
     }
   }
+}
+
+// navivalikko
+.finna-navbar .navbar-nav>li>a {
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.finna-navbar .navbar-collapse .custom a {
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.finna-navbar .fa-facebook-button, .finna-navbar .fa-instagram, .finna-navbar .fa-twitter, .finna-navbar .fa-youtube-play {
+    background: tint(@link-color,88%);
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    text-align: center;
+    color: @link-color;
+    &:before {
+        line-height: 2em;
+    }
 }
