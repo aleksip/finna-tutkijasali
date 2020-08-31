@@ -11,4 +11,4 @@
 *********************************************************************************/
 
 body {background-image: none !important;}
-.template-dir-search.template-name-home .searchContent {background-repeat: no-repeat;background-size: cover;background-image: url("/tutkijasali/themes/custom/images/logo_background.png");}
+.template-dir-search.template-name-home .searchContent {background-repeat: no-repeat;background-size: cover;background-image: url("../images/logo_background.png");}
