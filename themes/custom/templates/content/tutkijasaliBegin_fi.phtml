@@ -1,7 +1,7 @@
 <div class="tutkijasali-banner">
   <div class="row">
     <div class="col-xs-12">
-        <h1>Finnan tutkijasali</h1>
+        <h1>Finna Tutkijasali</h1>
     </div>
 </div>
 
@@ -9,8 +9,8 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8">
-        <h3>Finnan tutkijasali pähkinänkuoressa</h3>
-        <p>Finnan tutkijasalista löydät aineistoja, aineistoluettoja ja aineistotietoja, joiden näyttämistä (pääsy) on rajoitettu. Voit kohdistaa hakuja kaikkiin palvelun aineistotietojen sisältämiin suojattuihin henkilötietoihin kirjautumalla ja sitoutumalla käyttöehtoihin. Tulevaisuudessa tutkijasalissa voi saada pääsyn myös rajoitettuihin digitaalisiin aineistoihin.</p>
+        <h3>Finna Tutkijasali pähkinänkuoressa</h3>
+        <p>Finna Tutkijasalista löydät aineistoja, aineistoluettoja ja aineistotietoja, joiden näyttämistä (pääsy) on rajoitettu. Voit kohdistaa hakuja kaikkiin palvelun aineistotietojen sisältämiin suojattuihin henkilötietoihin kirjautumalla ja sitoutumalla käyttöehtoihin. Tulevaisuudessa tutkijasalissa voi saada pääsyn myös rajoitettuihin digitaalisiin aineistoihin.</p>
         <?php if ($this->R2()->isRegistered() && $this->R2()->hasUserAccess(true)): ?>
         <?= $this->R2RestrictedRecordRegistered(null, ['user' => $this->auth()->isLoggedIn(), 'hideInfoLink' => true])?>
 <?php else: ?>
