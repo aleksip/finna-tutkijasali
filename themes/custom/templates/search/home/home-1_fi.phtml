@@ -1,14 +1,21 @@
 <!-- START of: finna - search/home/home-1.phtml -->
 <div class="container">
-  <div class="col-sm-6">
+  <div class="col-sm-12">
     <h2>Virtuaalinen Tutkijasali tarjoaa löytöjä kotikoneelta</h2>
+  </div>
+  <div class="col-sm-6">
     <p>Finna Tutkijasalista löydät <strong>aineistotietoja</strong> (metatieto), joiden näyttämistä on rajoitettu eli pääsy niihin ei ole vapaata. Voit kohdistaa hakuja kaikkiin palvelun aineistotietojen sisältämiin suojattuihin henkilötietoihin kirjautumalla ja sitoutumalla käyttöehtoihin.</p>
     <p>Tulevaisuudessa Tutkijasalissa voi saada pääsyn myös rajoitettuihin <strong>digitaalisiin aineistoihin</strong>.</p>
   </div>
   <div class="col-sm-6 r2-info">
-    <h2>Finna Tutkijasali</h2>
-    <?= $this->R2RestrictedRecordRegister(null, ['user' => $this->auth()->isLoggedIn(), 'ignoreCache' => true])?>
-    <?= $this->R2RestrictedRecordRegistered(null, ['user' => $this->auth()->isLoggedIn(), 'ignoreCache' => true])?>
+    <?php if (false && $this->auth()->isLoggedIn()): ?>
+      <?= $this->R2RestrictedRecordRegistered(null, ['user' => $this->auth()->isLoggedIn(), 'ignoreCache' => true])?>
+    <?php else: ?>
+      <div class="r2-restricted-info">
+        <div><i class="fa fa-research fa-4x"></i></div>
+        <div><?= $this->translate('R2_restricted_info_html') ?></div>
+      </div>
+    <?php endif ?>
   </div>
 </div>
 <!-- END of: finna - search/home/home-1.phtml -->
