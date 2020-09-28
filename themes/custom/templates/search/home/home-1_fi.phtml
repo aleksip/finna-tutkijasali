@@ -8,7 +8,7 @@
     <p>Tulevaisuudessa Tutkijasalissa voi saada pääsyn myös rajoitettuihin <strong>digitaalisiin aineistoihin</strong>.</p>
   </div>
   <div class="col-sm-6 r2-info">
-    <?php if ($this->R2()->isRgistered()): ?>
+    <?php if ($this->R2()->isRegistered()): ?>
       <?= $this->R2RestrictedRecordRegistered(null, ['user' => $this->auth()->isLoggedIn(), 'ignoreCache' => true])?>
     <?php else: ?>
       <div class="r2-restricted-info">
