@@ -13,9 +13,7 @@
         <p>Finna Tutkijasalista löydät <strong>aineistotietoja</strong> (metatieto), joiden näyttämistä on rajoitettu eli pääsy niihin ei ole vapaata. Voit kohdistaa hakuja kaikkiin palvelun aineistotietojen sisältämiin suojattuihin henkilötietoihin kirjautumalla ja sitoutumalla käyttöehtoihin.</p>
         <p>Tulevaisuudessa Tutkijasalissa voi saada pääsyn myös rajoitettuihin <strong>digitaalisiin aineistoihin</strong>.</p>
         <?php if ($this->R2()->isRegistered() && $this->R2()->hasUserAccess(true)): ?>
-        <?= $this->R2RestrictedRecordRegistered(null, ['user' => $this->auth()->isLoggedIn(), 'hideInfoLink' => true, 'hideInfo' => true])?>
-<?php else: ?>
-        <?= $this->R2RestrictedRecordRegister(null, ['user' => $this->auth()->isLoggedIn(), 'hideNote' => true, 'hideInfoLink' => true, 'ignoreCache' => true])?>
+          <?= $this->R2RestrictedRecordRegistered(null, ['user' => $this->auth()->isLoggedIn(), 'hideInfo' => true])?>
         <?php endif; ?>
       </div>
       <div class="col-md-4">
