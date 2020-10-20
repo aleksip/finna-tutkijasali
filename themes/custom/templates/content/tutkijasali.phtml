@@ -18,7 +18,7 @@
 
   <div id="begin2" class="content-section">
     <h2>Tietoa tutkijasalin käytöstä</h2>
-    <p>Tietosi tallennetaan Finnan käyttäjärekisteriin ja erilliseen pääsynhallintakomponenttiin. <a href="<?=$this->url('myresearch-r2termsofuse')?>">Lue lisää tietosuojasta.</a></p>
+    <p>Tietosi tallennetaan Finnan käyttäjärekisteriin ja erilliseen pääsynhallintakomponenttiin. <a href="<?= $this->url('content-page', ['page' => 'privacy']) ?>">Lue lisää tietosuojasta.</a></p>
     <p>Päivittäisen ja kuukausittaisen käytön määrää on rajoitettu tietoturvasyistä. Mikäli käyttösessiosi katkaistaan kesken työskentelyn, voit ottaa yhteyttä tarvittaessa <a href="mailto:finna-palaute@helsinki.fi">finna-palaute@helsinki.fi</a>.</p>
     <p>Käyttömäärät tallentuvat väliaikaisesti palveluun ja ne poistetaan 30 päivän kuluttua, jos poikkeavia määriä ei ole esiintynyt. Hakurajoitusten laskentatapa ei ole sidottu kalenterikuukauteen tai vuorokauden vaihtumiseen.</p>
     <p><a href="<?=$this->url('content-page', ['page' => 'help'])?>">Finnan hakuohjeet.</a></p>
@@ -76,7 +76,7 @@
 
    <h3>Tietosuoja</h3>
    <p>Tietosuoja on perusoikeus, joka turvaa rekisteröidyn oikeuksien ja vapauksien toteutumisen henkilötietojen käsittelyssä. Tietosuojan tarkoituksena on osoittaa, milloin ja millä edellytyksillä henkilötietoja voidaan käsitellä. Henkilötietojen käsittelyn on aina perustuttava lakiin. (tietosuoja.fi)</p>
-   <p><a href="">Finna Tutkijasalin tietosuojailmoitus</a>.</p>
+   <p><a href="<?= $this->url('content-page', ['page' => 'privacy']) ?>">Finna Tutkijasalin tietosuojailmoitus</a>.</p>
 
   </div>
 
