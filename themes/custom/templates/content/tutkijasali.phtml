@@ -13,58 +13,84 @@
 <div class="mainbody right">
   <div id="begin1" class="content-section">
     <h2>Ohjeet Finna Tutkijasaliin</h2>
-    <ol class="list-decimal">
-      <li>Klikkaa oikeassa yläkulmassa olevaa Kirjaudu-painiketta ja valitse suomi.fi-kirjautuminen.</li>
-      <li>Tunnistaudu Suomi.fi-tunnistamismenetelmällä (vahva tunnistaminen, esim. verkkopankkitunnuksilla).</li>
-      <li>Täytä tunnistamisen jälkeen avautuva käyttöehtolomake.</li>
-      <li>Kerro lomakkeella käyttötarkoituksesi aineistotiedoille ja aineistoille, hyväksy käyttöehdot sekä täydennä yhteystietosi.</li>
-      <li>Lähetä lomake.</li>
-    </ol>
-    <p>Voit nyt kohdistaa hakuja myös kaikkiin palvelun sisältämiin tietosuojattuihin aineistotietoihin ja nähdä ne aineistosivuilla.</p>
+    <?= $this->R2RestrictedRecordRegister(null, ['user' => $this->auth()->isLoggedIn(), 'ignoreCache' => true, 'hideInfo' => true])?>
+  </div>
 
-    <h3>Tietoa tutkijasalin käyttämisestä</h3>
-    <p>Tietosi tallennetaan Finnan käyttäjärekisteriin ja REMS-luvituspalveluun (CSC). <a href="<?=$this->url('myresearch-r2termsofuse')?>">Lue lisää tietosuojaselosteesta</a>. Päivittäisen käytön määrää on rajattu tietoturvasyistä. Mikäli Finna Tutkijasalin käyttösi katkaistaan kesken työskentelyn, voit ottaa yhteyttä XXX@xxx.fi tai käyttää tutkijasalia seuraavana päivänä taas tavalliseen tapaan. Päivittäisen käytön määrä tallentuu seurantalokiin. Nämä lokit poistetaan xx päivän kuluttua, jos poikkeavuuksia ei ole esiintynyt.</p>
-    <p>Finna Tutkijasalin haku ja hakutoiminnot vastaavat Finna.fi-hakupalvelun hakua muilta kuin suojattujen aineistojen osalta. <a href="<?=$this->url('content-page', ['page' => 'help'])?>">Yleisiä hakuohjeita.</a></p>
-  </div>
   <div id="begin2" class="content-section">
-    <h2>Sisältö ja rajaukset</h2>
-    <p>Finna Tutkijasalipalvelu sisältää tällä hetkellä pilottiaineistona käytetyt Suomalaisen Kirjallisuuden Seuran (SKS) arkistoaineistojen aineistotiedot (luettelointitiedot).</p>
-    <p>Projektin seuraavissa vaiheissa toteutaan myös rajoitusten alaisten aineistojen käyttö verkossa sekä arkaluontoisia henkilötietoja sisältävien kuvailutietojen näyttäminen erillisen lupa-anomuksen hyväksynnän jälkeen.</p>
+    <h2>Tietoa tutkijasalin käytöstä</h2>
+    <p>Tietosi tallennetaan Finnan käyttäjärekisteriin ja erilliseen pääsynhallintakomponenttiin. <a href="<?=$this->url('myresearch-r2termsofuse')?>">Lue lisää tietosuojasta.</a></p>
+    <p>Päivittäisen ja kuukausittaisen käytön määrää on rajoitettu tietoturvasyistä. Mikäli käyttösessiosi katkaistaan kesken työskentelyn, voit ottaa yhteyttä tarvittaessa <a href="mailto:finna-palaute@helsinki.fi">finna-palaute@helsinki.fi</a>.</p>
+    <p>Käyttömäärät tallentuvat väliaikaisesti palveluun ja ne poistetaan 30 päivän kuluttua, jos poikkeavia määriä ei ole esiintynyt. Hakurajoitusten laskentatapa ei ole sidottu kalenterikuukauteen tai vuorokauden vaihtumiseen.</p>
+    <p><a href="<?=$this->url('content-page', ['page' => 'help'])?>">Finnan hakuohjeet.</a></p>
   </div>
+
   <div id="begin3" class="content-section">
     <h2>Aineistotietojen käyttöehdot</h2>
-    <p>Finna Tutkijasalin  sisältämiä aineistotietoja (kuvailutietoa, luettelointitietoa, metatietoja) voi käyttää tietosuoja-asetuksen ja tietosuojalain asettamin rajoituksin. Käyttäjällä on oikeus hakea ja selata aineistotietoja. Käyttäjä sitoutuu käyttämään aineistotietoa ja aineistoja ilmoittamansa käyttötarkoituksen mukaisesti.</p>
-    <p>Jos käyttäjä toimii Palvelun käyttöehtojen, lainsäädännön tai hyvien tapojen vastaisesti, Palvelun ylläpitäjä voi lopettaa käyttöoikeuden ja poistaa käyttäjätunnuksen. Käyttäjä vastaa kaikesta vahingosta, joka on aiheutunut arkistolle tai kolmannelle osapuolelle siitä, että käyttäjä on toiminut näiden käyttöehtojen, lainsäädännön, viranomaismääräysten tai hyvien tapojen vastaisesti.</p>
+    <p>Finna Tutkijasalin sisältämiä aineistotietoja (kuvailu-, luettelointi- ja metatietoja) voi käyttää tietosuoja-asetuksen ja tietosuojalain asettamin rajoituksin. Käyttäjällä on oikeus hakea ja selata aineistotietoja. Käyttäjä sitoutuu käyttämään aineistotietoja ilmoittamansa käyttötarkoituksen mukaisesti.</p>
+    <p>Jos käyttäjä toimii aineistotietojen käyttöehtojen, lainsäädännön tai hyvien tapojen vastaisesti, palvelun ylläpitäjä voi lopettaa käyttöoikeuden ja poistaa käyttäjätunnuksen. Käyttäjä vastaa kaikesta vahingosta, joka on aiheutunut arkistolle tai kolmannelle osapuolelle siitä, että käyttäjä on toiminut näiden käyttöehtojen, lainsäädännön, viranomaismääräysten tai hyvien tapojen vastaisesti.</p>
+    <p><a href="https://www.finlex.fi/fi/laki/ajantasa/" target="_blank">Lue lisää ajantasaisesta lainsäädännöstä.</a></p>
+    <p>Tutkijasali-käyttöliittymä sisältää myös vapaasti käytettäviä aineistotietoja. Nämä aineistotiedot ovat haettavissa ja näkyvillä myös kirjautumattomana. Finna.fi-käyttöliittymän aineistotiedot ovat pääsääntöisesti käytettävissä vapaasti.</p>
+    <p>Aineiston geokoodauksessa eli koordinaattien lisäämisessä aineistoon on käytetty OpenStreetMapin avointa dataa, joka on lisensoitu <a href="https://opendatacommons.org/licenses/odbl/" target="_blank">Open Data Commons Open Database -lisenssillä.</a></p>
   </div>
+
   <div id="begin4" class="content-section">
     <h2>Palvelussa käytetyt käsitteet</h2>
 
     <h3>Aineistotieto</h3>
-    <p>Finnassa aineistotieto tarkoittaa kaikkia metatietoja, nämä sisältävät sekä kuvailevan metatiedon että luettelointitiedon. Suureen osaan Finnaan tuodusta aineistotiedosta voi kohdistaa hakuja.</p>
+    <p>Finnassa aineistotieto tarkoittaa kaikkia metatietoja. Aineistotiedot sisältävät kuvailevan metatiedon ja luettelointitiedon. Suureen osaan Finnaan tuodusta aineistotiedosta voi kohdistaa hakuja.</p>
 
     <h3>Henkilötieto</h3>
-    <p>Henkilötietoja ovat sellaiset tiedot, joiden perusteella henkilö voidaan tunnistaa suoraan tai välillisesti esimerkiksi yhdistämällä yksittäinen tieto johonkin toiseen tietoon, joka mahdollistaa tunnistamisen. Henkilö voidaan tunnistaa esimerkiksi nimen, henkilötunnuksen tai jonkin hänelle tunnusomaisen tekijän perusteella. Lähde: Tietosuojavaltuutettu.</p>
+    <p>Henkilötietoja ovat sellaiset tiedot, joiden perusteella henkilö voidaan tunnistaa suoraan tai välillisesti. Välillisesti henkilö voidaan tunnistaa esimerkiksi yhdistämällä yksittäinen tieto toiseen tietoon, joka mahdollistaa tunnistamisen. Henkilö voidaan tunnistaa esimerkiksi nimen, henkilötunnuksen tai jonkin hänelle tunnusomaisen tekijän perusteella. Lähde: <a href="https://tietosuoja.fi" target="_blank">Tietosuoja.fi</a></p>
 
    <h3>Erityinen henkilötietoryhmä</h3>
-   <p>Tällaisista tiedoista ilmenee henkilön</p>
+   <p>Erityisellä henkilötietoryhmällä tarkoitetaan tietoja, joista ilmenee</p>
    <ul class="list-bullets">
-     <li>rotu tai etninen alkuperä</li>
-     <li>poliittisia mielipiteitä</li>
-     <li>uskonnollinen tai filosofinen vakaumus</li>
-     <li>ammattiliiton jäsenyys</li>
-     <li>terveyttä koskevia tietoja</li>
-     <li>seksuaalinen suuntautuminen tai käyttäytyminen</li>
-     <li>geneettisiä ja biometrisia tietoja henkilön tunnistamista varten</li>
+    <li>henkilön rotu tai etninen alkuperä</li>
+    <li>poliittisia mielipiteitä</li>
+    <li>uskonnollinen tai filosofinen vakaumus</li>
+    <li>ammattiliiton jäsenyys</li>
+    <li>terveyttä koskevia tietoja</li>
+    <li>seksuaalinen suuntautuminen tai käyttäytyminen</li>
+    <li>geneettisiä ja biometrisia tietoja henkilön tunnistamista varten.</li>
    </ul>
 
    <h3>Käyttösitoumus</h3>
-   <p>Käyttäjän tietoihin jäävä merkintä siitä, että käyttäjä sitoutuu käyttämään palvelun sisältämiä aineistoja tai aineistotietoja vain luvallisilla tavoilla.</p>
-   
+   <p>Käyttäjän tietoihin jää merkintä siitä, että käyttäjä on sitoutunut käyttämään palvelun sisältämiä aineistoja ja aineistotietoja vain luvallisin tavoin. Katso palvelun <a href="#begin3">Käyttöehdot</a>.</p>
+
+   <h3>Käyttötarkoitus</h3>
+   <p>Suomen tietosuojalaki ja muut liittyvät lait edellyttävät käyttäjää kertomaan käyttötarkoituksensa pääsyrajoitetulle aineistotiedolle ja aineistolle. Valittavissa olevat käyttötarkoitukset perustuvat lakeihin. Valittu käyttötarkoitus ei vaikuta henkilötietoa sisältävän <strong>aineistotiedon</strong> saantiin. Osa palveluun tulevista digitaalisista <strong>aineistoista</strong> voi olla pääsyrajoitettu vain osalle käyttötarkoituksista.</p>
+
+   <h3>Valittavissa olevat käyttötarkoitukset:</h3>
+   <ul>
+     <li>Tieteellinen tutkimus (kaikki tieteellinen tutkimus)</li>
+     <li>Historiallinen tutkimus (esim. sukututkimus)</li>
+     <li>Oikeusvaateen laatiminen, esittäminen ja puolustaminen</li>
+     <li>Journalistiset tarkoitukset</li>
+     <li>Akateeminen, taiteellinen tai kirjallinen ilmaisu</li>
+     <li>Henkilökohtainen tiedontarve</li>
+   </ul>
+   <p><a href="https://www.finlex.fi/fi/laki/ajantasa/" target="_blank">Lue lisää ajantasaisesta lainsäädännöstä.</a></p>
+    
    <h3>Pääsy tai pääsyoikeus</h3>
    <p>Tunnistetulle identiteetille myönnetään tämän käyttötarkoituksen mukaiset käyttövaltuudet määriteltyihin aineistotietoihin tai aineistoihin.</p>
 
    <h3>Tietosuoja</h3>
    <p>Tietosuoja on perusoikeus, joka turvaa rekisteröidyn oikeuksien ja vapauksien toteutumisen henkilötietojen käsittelyssä. Tietosuojan tarkoituksena on osoittaa, milloin ja millä edellytyksillä henkilötietoja voidaan käsitellä. Henkilötietojen käsittelyn on aina perustuttava lakiin. (tietosuoja.fi)</p>
+   <p><a href="">Finna Tutkijasalin tietosuojailmoitus</a>.</p>
+
   </div>
+
+  <div id="begin5" class="content-section">
+    <h2>Palvelun käyttöä koskevat yleiset ehdot</h2>
+    <p>Palvelua tai sen osia ei saa käyttää tavanomaisesta poikkeaviin käyttötarkoituksiin. Palvelun kirjautumista edellyttävien toimintojen automaattinen käyttäminen, mukaan lukien "robot-", "spider-", "scraper-" ja "offline reader-" ohjelmistot, on kielletty.</p>
+    <p>Varaamme oikeuden rajata palvelun saatavuutta esimerkiksi ylläpidon, muutostöiden tai palvelun toiminnan turvaamiseksi.</p>
+  </div>
+
+  <div id="begin6" class="content-section">
+    <h2>Sisältö ja rajaukset</h2>
+    <p>Finna Tutkijasali -palvelu sisältää tällä hetkellä pilottiaineistona käytetyt Suomalaisen Kirjallisuuden Seuran arkistoaineistojen aineistotiedot. Mukaan tulevien organisaatioiden Tiedot päivittyvät <a href="<?= $this->url('content-page', ['page' => 'tutkijasali-organisaatiot']) ?>">Organisaatiot-välilehdelle.</a></p>
+    <p>Projektin seuraavissa vaiheissa toteutetaan pääsyrajoituksia sisältävien aineistojen käyttö verkossa ja muita lisäominaisuuksia palveluun.</p>
+  </div>
+
 </div>
 <!-- END of: custom - content/tutkijasali_fi.phtml -->

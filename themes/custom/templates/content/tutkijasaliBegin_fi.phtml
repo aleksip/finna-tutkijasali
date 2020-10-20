@@ -10,8 +10,7 @@
     <div class="row">
       <div class="col-md-8">
         <h3>Finna Tutkijasali pähkinänkuoressa</h3>
-        <p>Finna Tutkijasalista löydät <strong>aineistotietoja</strong> (metatieto), joiden näyttämistä on rajoitettu eli pääsy niihin ei ole vapaata. Voit kohdistaa hakuja kaikkiin palvelun aineistotietojen sisältämiin suojattuihin henkilötietoihin kirjautumalla ja sitoutumalla käyttöehtoihin.</p>
-        <p>Tulevaisuudessa Tutkijasalissa voi saada pääsyn myös rajoitettuihin <strong>digitaalisiin aineistoihin</strong>.</p>
+        <p>Finna Tutkijasalista löydät <strong>aineistotietoja</strong>, joihin pääsy on rajoitettu eli se ei ole vapaata. Voit hakea kaikkia palvelun aineistotietojen sisältämiä suojattuja henkilötietoja kirjautumalla palveluun ja sitoutumalla käyttöehtoihin.Tulevaisuudessa Tutkijasalissa voi  käyttää myös <strong>digitaalisia aineistoja</strong> (joihihin pääsy saattaa olla rajoitettu eri syistä).</p>
         <?php if ($this->R2()->isRegistered() && $this->R2()->hasUserAccess(true)): ?>
           <?= $this->R2RestrictedRecordRegistered(null, ['user' => $this->auth()->isLoggedIn(), 'hideInfo' => true])?>
         <?php endif; ?>
