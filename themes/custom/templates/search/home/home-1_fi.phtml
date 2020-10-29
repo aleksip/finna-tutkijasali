@@ -7,9 +7,10 @@
     <p>Tulevaisuudessa Tutkijasalissa voi saada pääsyn myös rajoitettuihin <strong>digitaalisiin aineistoihin</strong>.</p>
   </div>
   <div class="col-sm-6 r2-info">
-    <?php if (!$this->R2()->isRegistered()): ?>
+    <?php $user = $this->auth()->isLoggedIn(); ?>
+    <?php if (!$user || !$this->R2()->isRegistered(true)): ?>
       <h2>Ohjeet Finna Tutkijasaliin</h2>
-      <?= $this->R2RestrictedRecordRegister(null, ['user' => $this->auth()->isLoggedIn(), 'ignoreCache' => true, 'hideInfo' => true])?>
+      <?= $this->R2RestrictedRecordRegister(null, ['user' => $user, 'ignoreCache' => true, 'hideInfo' => true])?>
     <?php else: ?>
       <h2>Olet kirjautunut Finna Tutkijasaliin</h2>
       <div class="r2-restricted-info">
