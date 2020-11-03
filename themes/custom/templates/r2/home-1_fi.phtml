@@ -12,9 +12,9 @@
   <div class="col-sm-6 r2-info">
     <h2>Finna Tutkijasali</h2>
     <?php if ($this->R2()->isRegistered() && $this->R2()->hasUserAccess(true)): ?>
-        <?= $this->R2RestrictedRecordRegistered(null, ['user' => $this->auth()->isLoggedIn()])?>
+        <?= $this->R2()->registeredInfo(null)?>
     <?php else: ?>
-        <?= $this->R2RestrictedRecordRegister(null, ['user' => $this->auth()->isLoggedIn(), 'ignoreCache' => true])?>
+        <?= $this->R2()->register(null, ['ignoreCache' => true])?>
     <?php endif; ?>
   </div>
 </div>
