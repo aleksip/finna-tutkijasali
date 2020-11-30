@@ -11,6 +11,7 @@
       <div class="col-md-8">
         <h3>Finna Tutkijasali pähkinänkuoressa</h3>
         <p>Finna Tutkijasalista löydät <strong>aineistotietoja</strong>, joihin pääsy on rajoitettu eli se ei ole vapaata. Voit hakea kaikkia palvelun aineistotietojen sisältämiä suojattuja henkilötietoja kirjautumalla palveluun ja sitoutumalla käyttöehtoihin.Tulevaisuudessa Tutkijasalissa voi  käyttää myös <strong>digitaalisia aineistoja</strong> (joihihin pääsy saattaa olla rajoitettu eri syistä).</p>
+        <p>Finna Tutkijasali on Kansalliskirjaston Finna-palveluiden sekä CSC:n pilottinäkymä, jossa pääset tutustumaan pääsyrajoitettuja aineistotietoja sisältäviin aineistoihin. Nähdäksesi kaikki Finnassa mukana olevat organisaatiot ja aineistot siirry valtakunnalliseen <a href="https://finna.fi">finna.fi-hakupalveluun</a>.</p>
         <?php if ($this->R2()->isRegistered() && $this->R2()->hasUserAccess(true)): ?>
           <?= $this->R2()->registeredInfo(null, ['hideInfo' => true])?>
         <?php endif; ?>
