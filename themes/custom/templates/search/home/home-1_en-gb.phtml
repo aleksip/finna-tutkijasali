@@ -1,12 +1,27 @@
+
 <!-- START of: finna - search/home/home-1.phtml -->
-<?php if ($template = $this->content()->findTemplateForLng('search/home/home-left')): ?>
-  <div class="left-column-content">
-    <?=$this->render($template)?>
+<?= $this->flashmessages() ?>
+<div class="container">
+  <div class="col-sm-6">
+    <h2>Discover treasures on your home computer in the virtual Reading Room </h2>
+    <p>Unique treasures in Finna Reading Room in addition to a wide range of resources, the service also contains protected <strong> metadata </strong> (records)to which content view restrictions apply and users have limited access. To search for protected personally identifiable information from all the records contained in the service, you must log in to the Reading Room and agree to the terms of use.</p>
+    <p>In the coming years, Reading Room users may also be granted access to protected <strong>digital materials</strong> in addition to the freely available contents.</p>
   </div>
-<?php endif; ?>
-<?php if ($template = $this->content()->findTemplateForLng('search/home/home-right')): ?>
-  <div class="right-column-content">
-    <?=$this->render($template)?>
+  <div class="col-sm-6 r2-info">
+    <?php $user = $this->auth()->isLoggedIn(); ?>
+    <?php if (!$user || !$this->R2()->isRegistered(true)): ?>
+      <h2>Finna Reading Room instructions</h2>
+      <?= $this->R2()->register(null, ['ignoreCache' => true, 'hideInfo' => true])?>
+    <?php else: ?>
+      <h2>You are logged in to Finna Reading Room.</h2>
+      <div class="r2-restricted-info">
+        <div><i class="fa fa-research fa-4x"></i></div>
+        <div><?= $this->translate('R2_restricted_info_html') ?></div>
+      </div>
+   <?php endif ?>
+   <blockquote class="finnafi-blockquote">
+     <p><a href="<?= $this->url('content-page', ['page' => 'help']) ?>">Check out Finna Instructions </a> if you need tips on how to search and narrow your search results with filters.</p>
+   </blockquote>
   </div>
-<?php endif; ?>
+</div>
 <!-- END of: finna - search/home/home-1.phtml -->
