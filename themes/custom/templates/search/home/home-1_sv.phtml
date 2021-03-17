@@ -1,12 +1,26 @@
 <!-- START of: finna - search/home/home-1.phtml -->
-<?php if ($template = $this->content()->findTemplateForLng('search/home/home-left')): ?>
-  <div class="left-column-content">
-    <?=$this->render($template)?>
+<?= $this->flashmessages() ?>
+<div class="container">
+  <div class="col-sm-6">
+    <h2>Den virtuella Forskarsalen erbjuder upptäckter från hemdatorn</h2>
+    <p>I Finna Forskarsal hittar du arkivskatter! Förutom ett brett utbud av material kan du hitta dataskyddade <strong> materialuppgifter </strong> (metadata). Dessa är begränsade och inte fritt tillgängliga. Du kan söka i alla skyddade personuppgifter i de materialuppgifter som finns i tjänsten genom att logga in i Forskarsalen och förbinda dig till användarvillkoren.</p>
+    <p>I framtiden kommer man i Forskarsalen också att kunna få tillgång till dataskyddat  <strong>digitaliserat material</strong>, utöver det öppna materialet.</p>
   </div>
-<?php endif; ?>
-<?php if ($template = $this->content()->findTemplateForLng('search/home/home-right')): ?>
-  <div class="right-column-content">
-    <?=$this->render($template)?>
+  <div class="col-sm-6 r2-info">
+    <?php $user = $this->auth()->isLoggedIn(); ?>
+    <?php if (!$user || !$this->R2()->isRegistered(true)): ?>
+      <h2>Instruktioner för Finna Forskarsal</h2>
+      <?= $this->R2()->register(null, ['ignoreCache' => true, 'hideInfo' => true])?>
+    <?php else: ?>
+      <h2>Du är inloggad i Finna Forskarsal</h2>
+      <div class="r2-restricted-info">
+        <div><i class="fa fa-research fa-4x"></i></div>
+        <div><?= $this->translate('R2_restricted_info_html') ?></div>
+      </div>
+   <?php endif ?>
+   <blockquote class="finnafi-blockquote">
+     <p><a href="<?= $this->url('content-page', ['page' => 'help']) ?>">Ta en titt på Finnas sökanvisningar</a>, om du behöver tips på hur du söker och begränsar.</p>
+   </blockquote>
   </div>
-<?php endif; ?>
+</div>
 <!-- END of: finna - search/home/home-1.phtml -->
