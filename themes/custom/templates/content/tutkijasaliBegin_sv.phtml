@@ -1,0 +1,27 @@
+<div class="tutkijasali-banner">
+  <div class="row">
+    <div class="col-xs-12">
+        <h1>Finna Forskarsal</h1>
+    </div>
+</div>
+
+<div class="grey">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h3>Finna Forskarsal i ett nötskal</h3>
+        <p>I Finna Forskarsal hittar du <strong>materialuppgifter</strong> till vilka tillgången är begränsad, de är alltså inte fritt tillgängliga. Du kan söka i alla skyddade personuppgifter i de materialuppgifter som finns i tjänsten genom att logga in i tjänsten och förbinda dig till användarvillkoren. I framtiden kommer man i Forskarsalen också att kunna använda <strong>digitaliserat material</strong> (till vilket tillgången kan komma att vara begränsad av olika skäl).</p>
+        <p>Finna Forskarsal är en pilotvy för Nationalbibliotekets Finna-tjänsterna och CSC, där du kan bekanta dig med material som innehåller dataskyddade materialuppgifter. För att se alla deltagande organisationer och material i Finna, gå till den riksomfattande <a href="https://finna.fi">söktjänsten finna.fi</a>.</p>
+        <?php if ($this->R2()->isRegistered() && $this->R2()->hasUserAccess(true)): ?>
+          <?= $this->R2()->registeredInfo(null, ['hideInfo' => true])?>
+        <?php endif; ?>
+      </div>
+      <div class="col-md-4">
+        <div class="img-wrapper">
+          <img src="<?= $this->imageSrc('tutkijasali.jpg')?>" alt="">
+          <div class="text">Nyblin Daniel, fotograf. Valtionarkiston tutkijasali, 1901. CC BY 4.0 Museovirasto</div>
+        </div>
+      </div>    
+    </div>
+  </div>
+</div>
