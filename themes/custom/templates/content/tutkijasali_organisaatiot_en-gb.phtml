@@ -1,0 +1,15 @@
+<!-- START of: custom - content/tutkijasali_organisaatiot_en-gb.phtml -->
+<?php $this->headTitle($this->translate('R2_menu_heading'));?>
+<?php if ($this->resolver('tutkijasaliBegin_sv.phtml')): ?>
+  <?=$this->render('tutkijasaliBegin_sv.phtml')?>
+<?php endif; ?>
+<?php if ($this->resolver('content/tutkijasali-tabs.phtml')): ?>
+  <?=$this->render('content/tutkijasali-tabs.phtml', ['activeTab' => 'tutkijasali-organisaatiot'])?>
+<?php endif; ?>
+<div class="mainbody">
+  <h2>Participating organizations</h2>
+  <p>At present, the following organisations have submitted records containing personal data to the Finna Reading Room service:
+</p>
+  <p><a href="https://www.finlit.fi/en/archive">Finnish Literature Society archives</a></p>
+</div>
+<!-- END of: custom - content/tutkijasali-organisaatiot_en-gb.phtml -->
