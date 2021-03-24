@@ -1,0 +1,99 @@
+<!-- START of: custom - content/tutkijasali-ukk_sv.phtml -->
+<?php $this->headTitle($this->translate('R2_menu_heading'));?>
+<?php if ($this->resolver('tutkijasaliBegin_sv.phtml')): ?>
+  <?=$this->render('tutkijasaliBegin_sv.phtml')?>
+<?php endif; ?>
+<?php if ($this->resolver('content/tutkijasali-tabs.phtml')): ?>
+  <?=$this->render('content/tutkijasali-tabs.phtml', ['activeTab' => 'tutkijasali-ukk'])?>
+<?php endif; ?>
+<div class="mainbody">
+  <h2>Vanliga frågor</h2>
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="heading1">
+        <h3 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+            <i class="fa fa-arrow-down open-icon"></i>
+            <i class="fa fa-arrow-up close-icon"></i>
+            Varför måste jag logga in i Finna Forskarsal med mina nätbankskoder?
+          </a>
+        </h3>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+        <div class="panel-body">
+          <p>Användning av skyddade personuppgifter förutsätter tillförlitlig verifiering av identitet. Tillgång till personuppgifter sparas även för eventuell framtida användning. I dataskyddsmeddelandet redogörs för lagringen av dina uppgifter.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="heading2">
+        <h3 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+            <i class="fa fa-arrow-down open-icon"></i>
+            <i class="fa fa-arrow-up close-icon"></i>
+            Varför måste jag förbinda mig till användarvillkoren vid varje användning?
+          </a>
+        </h3>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+        <div class="panel-body">
+          <p>Du förbinder dig till användarvillkoren och anger syfte separat varje gång du loggar in för att säkerställa att skyddade uppgifter endast används i ett lagenligt syfte.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="heading3">
+        <h3 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
+            <i class="fa fa-arrow-down open-icon"></i>
+            <i class="fa fa-arrow-up close-icon"></i>
+            Varför blir jag utloggad? Varför avslutas min session av sig själv?
+          </a>
+        </h3>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+        <div class="panel-body">
+          <p>En session i Finna Forskarsal avbryts om tjänsten inte används på 30 minuter. Avbrottet sker av säkerhetsskäl, så att en session som oavsiktligen lämnats öppen inte så lätt kan användas av någon annan. Kom dock alltid ihåg att logga ut själv när du slutar använda Forskarsalen.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="heading4">
+        <h3 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" aria-controls="collapse4">
+            <i class="fa fa-arrow-down open-icon"></i>
+            <i class="fa fa-arrow-up close-icon"></i>
+              Varför ser jag inte allt nytt material i min nyhetsvakt?
+          </a>
+        </h3>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+        <div class="panel-body">
+          <p>Nyhetsvakten innehåller inte sådant material vars materialuppgifter till sin helhet, inbegripet på rubriknivå, består av skyddade materialuppgifter. Information om sådant material kan inte skickas via e-post. Du kan se också skyddade nya materialuppgifter genom att logga in i Finna Forskarsal och begränsa sökresultatet med begränsningen ’Nytt i Forskarsalen’.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="heading5">
+        <h3 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+            <i class="fa fa-arrow-down open-icon"></i>
+            <i class="fa fa-arrow-up close-icon"></i>
+              Varför ser jag inte allt material i mitt RSS-flöde?
+          </a>
+        </h3>
+      </div>
+      <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+        <div class="panel-body">
+          <p>I RSS-flödet syns inte sådant material vars materialuppgifter till sin helhet, inbegripet på rubriknivå, består av skyddade materialuppgifter. Sådant material är endast synligt för identifierade användare som har förbundit sig till användarvillkoren för materialuppgifterna i Forskarsalen.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- END of: custom - content/tutkijasali-ukk_sv.phtml -->
