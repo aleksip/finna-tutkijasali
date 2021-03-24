@@ -1,0 +1,99 @@
+<!-- START of: custom - content/tutkijasali-ukk_gb-en.phtml -->
+<?php $this->headTitle($this->translate('R2_menu_heading'));?>
+<?php if ($this->resolver('tutkijasaliBegin_en-gb.phtml')): ?>
+  <?=$this->render('tutkijasaliBegin_en-gb.phtml')?>
+<?php endif; ?>
+<?php if ($this->resolver('content/tutkijasali-tabs.phtml')): ?>
+  <?=$this->render('content/tutkijasali-tabs.phtml', ['activeTab' => 'tutkijasali-ukk'])?>
+<?php endif; ?>
+<div class="mainbody">
+  <h2>Frequently asked questions</h2>
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="heading1">
+        <h3 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+            <i class="fa fa-arrow-down open-icon"></i>
+            <i class="fa fa-arrow-up close-icon"></i>
+            Why do I have to use my online banking credentials to log in to Finna Reading Room?
+          </a>
+        </h3>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+        <div class="panel-body">
+          <p>The use of protected personally identifiable information requires verifying the user’s identity in a reliable manner (strong authentication). Information about access granted to personal data is stored for later. The privacy policy describes the storage of your data.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="heading2">
+        <h3 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+            <i class="fa fa-arrow-down open-icon"></i>
+            <i class="fa fa-arrow-up close-icon"></i>
+            Why do I have to agree to the terms of use every time?
+          </a>
+        </h3>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+        <div class="panel-body">
+          <p>You must agree to the terms of use and provide the specified purpose each time you log in to the service to ensure that protected data are only used for specified and lawful purposes.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="heading3">
+        <h3 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
+            <i class="fa fa-arrow-down open-icon"></i>
+            <i class="fa fa-arrow-up close-icon"></i>
+            Why do I keep getting logged out? Why does my session end automatically?
+          </a>
+        </h3>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+        <div class="panel-body">
+          <p>Finna Reading Room sessions expire automatically if the service is not used for 30 minutes. The session timeout is applied for security reasons, to avoid letting other people continue using the service when a session has been left open accidentally. Despite the session timeout, remember to always log out yourself when you stop using the Reading Room service.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="heading4">
+        <h3 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" aria-controls="collapse4">
+            <i class="fa fa-arrow-down open-icon"></i>
+            <i class="fa fa-arrow-up close-icon"></i>
+              Why do I only receive scheduled alerts for certain new content?
+          </a>
+        </h3>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+        <div class="panel-body">
+          <p>Scheduled alerts are not sent about new content if the record as a whole is protected metadata, including the record header. Information on such materials cannot be sent via email. To be able to view new content with protected metadata as well, you need log in to Finna Reading Room and narrow your search results with the content filter ‘New in Reading Room’.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="heading5">
+        <h3 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+            <i class="fa fa-arrow-down open-icon"></i>
+            <i class="fa fa-arrow-up close-icon"></i>
+              Why don’t all the materials show up in my RSS feed?
+          </a>
+        </h3>
+      </div>
+      <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+        <div class="panel-body">
+          <p>The RSS feed does not show the materials if the record as a whole is protected metadata, including the record header. Such records only show up to users whose identity has been verified and who have agreed to the terms of use for the metadata contained in the Reading Room.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- END of: custom - content/tutkijasali-ukk_en-gb.phtml -->
