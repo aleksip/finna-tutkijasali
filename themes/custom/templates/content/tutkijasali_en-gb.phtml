@@ -1,0 +1,217 @@
+<!-- START of: custom - content/tutkijasali_en-gb.phtml -->
+
+<?php $this->headTitle($this->translate('R2_menu_heading'));?>
+
+<?php if ($this->resolver('tutkijasaliBegin_fi.phtml')): ?>
+
+  <?=$this->render('tutkijasaliBegin_fi.phtml')?>
+
+<?php endif; ?>
+
+<?php if ($this->resolver('content/tutkijasali-tabs.phtml')): ?>
+
+  <?=$this->render('content/tutkijasali-tabs.phtml', ['activeTab' => 'tutkijasali'])?>
+
+<?php endif; ?>
+
+<div class="sidebar left">
+
+  <div class="content-navigation-menu">
+
+  </div>
+
+</div>
+
+<div class="mainbody right">
+
+  <div id="begin1" class="content-section">
+
+    <h2>Finna Reading Room instructions</h2>
+
+    <?= $this->R2()->register(null, ['ignoreCache' => true, 'hideInfo' => true])?>
+
+  </div>
+
+
+
+
+  <div id="begin2" class="content-section">
+
+    <h2>Information about the use of the Finna Reading Room</h2>
+
+
+    <p>Your information will be stored in the Finna user register and the licence service for REMS – Resource Entitlement Management System (CSC).<br>Read more in the <a href="%%url%%" in the data-lightbox-ignore>privacy statement</a>.</p>
+
+    <p>Limits have been set for daily and monthly use for security reasons. If your session is terminated before you finished what you were doing, if necessary, contact us by sending a message to: <a href="mailto:finna-palaute@helsinki.fi">finna-palaute@helsinki.fi</a>.</p>
+
+    <p>The information is saved in the service temporarily and, unless unusual activity is detected, the information is deleted after 30 days. The determination of the limits is not tied to a calendar month or to the end/start of day.</p>
+
+    <p>Guidance on how to use the search functions in Finna is provided on the Instructions page of the Finna.fi website. <a href="<?=$this->url('content-page', ['page' => 'help'])?>">Check out Instructions in Finna.</a></p>
+
+
+  </div>
+
+
+
+
+  <div id="begin3" class="content-section">
+
+    <h2>Terms governing the use of metadata</h2>
+
+    <p>The metadata contained in Finna Reading Room (description records, catalogue metadata) may be used within the limits set by the General Data Protection Regulation (GDPR) and the Data Protection Act. The user has the right to browse and search for metadata. The user agrees to use the metadata and materials in accordance with the specified purpose provided.</p>
+
+    <p>The service administrator may terminate the user’s access rights and remove their account if the user acts in breach of the record terms of use, the law, or good practice. The user is liable for any damages that they cause to the archives or to a third party by acting in breach of the terms of use for records, the law, official regulations, or good practice.</p>
+
+    <p><a href="https://www.finlex.fi/fi/laki/ajantasa/" target="_blank">Read more about current legislation on the Finlex.fi website.</a></p>
+
+    <p>The Reading Room search service also contains records with metadata to which users have unlimited access. Such records are searchable and also displayed to users who are not logged in. As a rule, the records contained in the Finna.fi search service can be accessed freely.</p>
+
+    <p>OpenStreetMap open data has been used to geocode materials and is licensed through the <a href="https://opendatacommons.org/licenses/odbl/" target="_blank">Open Data Commons Open Database License.</a></p>
+
+  </div>
+
+
+
+
+
+
+  <div id="begin4" class="content-section">
+
+    <h2>Definitions of Service-Related Terms</h2>
+
+
+
+
+    <h3>Metadata</h3>
+
+    <p>In Finna, the term ‘metadata’ refers to all types of metadata, including descriptive metadata and catalogue metadata. Most of the metadata deposited in Finna is searchable.</p>
+
+
+    <h3>Protected metadata</h3>
+    <p>To view protected metadata, you need to log in to the Reading Room, specify your purpose for processing data, and agree to the terms of use. Records with protected metadata have typically information that relates to an identified or identifiable living individual, to which access restrictions must be applied under the Data Protection Act.</p>
+
+
+
+
+    <h3>Personal data</h3>
+
+    <p>Data that can be used to identify a person directly or indirectly, such as by combining an individual data item with some other piece of data that enables identification, are personal data. Persons can be identified by their name, personal identity code, or some other specific factor. Source: <a href="https://tietosuoja.fi" target="_blank">Data Protection Ombudsman</a></p>
+
+
+
+
+
+   <h3>Special categories of personal data</h3>
+
+   <p>Special category data is data concerning</p>
+
+   <ul class="list-bullets">
+
+    <li>racial or ethnic origin</li>
+
+    <li>political opinions</li>
+
+    <li>religious or philosophical beliefs</li>
+
+    <li>trade union membership</li>
+
+    <li>health information</li>
+
+    <li>person’s sexual orientation or sex life</li>
+
+    <li>genetic data and biometric data (where used for identification purposes).</li>
+
+   </ul>
+
+
+
+
+   <h3>User agreement</h3>
+
+   <p>An entry will be made in the user’s data that the user has agreed to only process the materials and data contained in the service for specified and lawful purposes. See the service <a href="#begin3">Terms & conditions</a>.</p>
+
+
+
+
+
+
+   <h3>Specified purpose</h3>
+
+   <p>The Finnish Data Protection Act and other relevant laws require The purpose of processing the protected metadata and materials must be specified by the user. The specified purposes made available to choose from are based on laws. The specified purpose chosen does not affect access to <strong>records</strong> containing personal data. Limits may have been set on which specified purposes <strong>digital materials</strong> submitted to the service are made available.</p>
+
+
+
+
+
+   <h3>Specify your purpose by choosing from the listed options below:</h3>
+
+   <ul>
+
+     <li>Scientific research (all)</li>
+
+     <li>Historical research (e.g. genealogy)</li>
+
+     <li>Drafting, filing or defending a legal claim</li>
+
+     <li>Journalistic uses</li>
+
+     <li>Academic, artistic or literary expression</li>
+
+     <li>Personal need for information</li>
+
+   </ul>
+
+   <p><a href="https://www.finlex.fi/fi/laki/ajantasa/" target="_blank">Read more about current legislation</a></p>
+
+    
+
+   <h3>Access or access rights</h3>
+
+   <p>After the identity of the user has been authenticated, access rights are granted to the metadata or materials specified in accordance with the specified purpose chosen.</p>
+
+
+
+
+   <h3>Data protection</h3>
+
+   <p>Data protection is a fundamental right that safeguards the rights and freedoms of data subjects when personal data is processed. The purpose of data protection is to define when and on what conditions personal data can be processed. The processing of personal data must always be based on law.  (tietosuoja.fi)</p>
+
+   <p><a href="<?= $this->url('content-page', ['page' => 'privacy']) ?>">Finna Reading Room privacy notice</a>.</p>
+
+
+
+
+  </div>
+
+
+
+
+  <div id="begin5" class="content-section">
+
+    <h2>General terms governing the use of the service</h2>
+
+    <p>The service or any of its parts may not be used for any purposes out of the ordinary. It is forbidden to use any automated methods (including "robot", "spider", "scraper" and "offline reader" software) to access functions that require the user to log in to the service.</p>
+
+    <p>We reserve the right to restrict access to the service for example to secure the maintenance, modification work or functioning of the service.</p>
+
+  </div>
+
+
+
+
+  <div id="begin6" class="content-section">
+
+    <h2>Content and restrictions</h2>
+
+    <p>The Finna Reading Room service currently contains archival records of the Finnish Literature Society, which has been submitted to the service for piloting purposes. Updated information on the participating organisations can be found in the <a href="<?= $this->url('content-page', ['page' => 'tutkijasali-organisaatiot']) ?>">Organisations tab.</a></p>
+
+    <p>The next stages in the project involve the deployment of the online use of materials containing protected content and other additional service functions for the service.</p>
+
+  </div>
+
+
+
+
+</div>
+
+<!-- END of: custom - content/tutkijasali_en-gb.phtml -->
