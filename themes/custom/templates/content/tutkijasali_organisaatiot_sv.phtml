@@ -1,0 +1,15 @@
+<!-- START of: custom - content/tutkijasali_organisaatiot_sv.phtml -->
+<?php $this->headTitle($this->translate('R2_menu_heading'));?>
+<?php if ($this->resolver('tutkijasaliBegin_sv.phtml')): ?>
+  <?=$this->render('tutkijasaliBegin_sv.phtml')?>
+<?php endif; ?>
+<?php if ($this->resolver('content/tutkijasali-tabs.phtml')): ?>
+  <?=$this->render('content/tutkijasali-tabs.phtml', ['activeTab' => 'tutkijasali-organisaatiot'])?>
+<?php endif; ?>
+<div class="mainbody">
+  <h2>Deltagande organisationer</h2>
+  <p>Följande organisationer har för närvarande fört in materialuppgifter som innehåller personuppgifter till Finna Forskarsal-tjänst:
+</p>
+  <p><a href="https://www.finlit.fi/sv/arkiv">Finska Litteratursällskapets Arkiv</a></p>
+</div>
+<!-- END of: custom - content/tutkijasali-organisaatiot_sv.phtml -->
