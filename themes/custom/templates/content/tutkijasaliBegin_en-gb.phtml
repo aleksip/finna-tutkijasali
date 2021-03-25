@@ -11,7 +11,7 @@
       <div class="col-md-8">
         <h3>Finna Reading Room in a nutshell</h3>
         <p>Finna Reading Room contains <strong>metadata</strong> with access restrictions, which means that they cannot be accessed freely. To search for protected personally identifiable information from all the metadata contained in the service, you need to log in to the service and agree to the terms of use. In the future, the Reading Room will also contain <strong>digital materials</strong> (to which access restrictions may apply for various reasons).</p>
-        <p>Finna Reading Room is a search service provided under a pilot project by the National Library’s Finna search services and CSC – IT Center for Science for browsing materials that contain protected metadata. To see all Finna’s participating organisations and materials, go to the national <a href="https://finna.fi">finna.fi search service.</a>.</p>
+        <p>Finna Reading Room is a search service provided under a pilot project by the National Library’s Finna search services and CSC – IT Center for Science for browsing materials that contain protected metadata. To see all Finna’s participating organisations and materials, go to the national <a href="https://finna.fi">finna.fi search service</a>.</p>
         <?php if ($this->R2()->isRegistered() && $this->R2()->hasUserAccess(true)): ?>
           <?= $this->R2()->registeredInfo(null, ['hideInfo' => true])?>
         <?php endif; ?>
