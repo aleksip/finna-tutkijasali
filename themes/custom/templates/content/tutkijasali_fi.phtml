@@ -18,11 +18,11 @@
   </div>
 
   <div id="begin2" class="content-section">
-    <h2>Tietoa tutkijasalin käytöstä</h2>
+    <h2>Tietoa Tutkijasalin käytöstä</h2>
     <p>Tietosi tallennetaan Finnan käyttäjärekisteriin ja erilliseen pääsynhallintakomponenttiin. <a href="<?= $this->url('content-page', ['page' => 'privacy']) ?>">Lue lisää tietosuojasta.</a></p>
     <p>Päivittäisen ja kuukausittaisen käytön määrää on rajoitettu tietoturvasyistä. Mikäli käyttösessiosi katkaistaan kesken työskentelyn, voit ottaa yhteyttä tarvittaessa <a href="mailto:finna-palaute@helsinki.fi">finna-palaute@helsinki.fi</a>.</p>
     <p>Käyttömäärät tallentuvat väliaikaisesti palveluun ja ne poistetaan 30 päivän kuluttua, jos poikkeavia määriä ei ole esiintynyt. Hakurajoitusten laskentatapa ei ole sidottu kalenterikuukauteen tai vuorokauden vaihtumiseen.</p>
-    <p><a href="<?=$this->url('content-page', ['page' => 'help'])?>">Finnan hakuohjeet.</a></p>
+    <p>Finnan yleiset hakuohjeet on koottu tietopaketiksi omalle sivulleen. <a href="<?=$this->url('content-page', ['page' => 'help'])?>">Tutustu Finnan hakuohjeisiin.</a></p>
   </div>
 
   <div id="begin3" class="content-section">
@@ -30,7 +30,7 @@
     <p>Finna Tutkijasalin sisältämiä aineistotietoja (kuvailu-, luettelointi- ja metatietoja) voi käyttää tietosuoja-asetuksen ja tietosuojalain asettamin rajoituksin. Käyttäjällä on oikeus hakea ja selata aineistotietoja. Käyttäjä sitoutuu käyttämään aineistotietoja ilmoittamansa käyttötarkoituksen mukaisesti.</p>
     <p>Jos käyttäjä toimii aineistotietojen käyttöehtojen, lainsäädännön tai hyvien tapojen vastaisesti, palvelun ylläpitäjä voi lopettaa käyttöoikeuden ja poistaa käyttäjätunnuksen. Käyttäjä vastaa kaikesta vahingosta, joka on aiheutunut arkistolle tai kolmannelle osapuolelle siitä, että käyttäjä on toiminut näiden käyttöehtojen, lainsäädännön, viranomaismääräysten tai hyvien tapojen vastaisesti.</p>
     <p><a href="https://www.finlex.fi/fi/laki/ajantasa/" target="_blank">Lue lisää ajantasaisesta lainsäädännöstä.</a></p>
-    <p>Tutkijasali-käyttöliittymä sisältää myös vapaasti käytettäviä aineistotietoja. Nämä aineistotiedot ovat haettavissa ja näkyvillä myös kirjautumattomana. Finna.fi-käyttöliittymän aineistotiedot ovat pääsääntöisesti käytettävissä vapaasti.</p>
+    <p>Tutkijasali-hakupalvelu sisältää myös vapaasti käytettäviä aineistotietoja. Nämä aineistotiedot ovat haettavissa ja näkyvillä myös kirjautumattomana. Finna.fi-hakupalvelun aineistotiedot ovat pääsääntöisesti käytettävissä vapaasti.</p>
     <p>Aineiston geokoodauksessa eli koordinaattien lisäämisessä aineistoon on käytetty OpenStreetMapin avointa dataa, joka on lisensoitu <a href="https://opendatacommons.org/licenses/odbl/" target="_blank">Open Data Commons Open Database -lisenssillä.</a></p>
   </div>
 
@@ -39,6 +39,9 @@
 
     <h3>Aineistotieto</h3>
     <p>Finnassa aineistotieto tarkoittaa kaikkia metatietoja. Aineistotiedot sisältävät kuvailevan metatiedon ja luettelointitiedon. Suureen osaan Finnaan tuodusta aineistotiedosta voi kohdistaa hakuja.</p>
+
+    <h3>Tietosuojattu aineistotieto</h3>
+    <p>Tietosuojattuja aineistotietoja voi nähdä kirjautumalla Tutkijasaliin, kertomalla hyväksytyn käyttötarkoituksen ja sitoutumalla käyttöehtoihin. Tyypillisesti tietosuojatttu aineistotieto koskee elossa oleviin henkilöihin liittyviä yksilöiviä tai tunnistettavia tietoja, joihin pääsyä on tietosuojalain mukaisesti rajattava.</p>
 
     <h3>Henkilötieto</h3>
     <p>Henkilötietoja ovat sellaiset tiedot, joiden perusteella henkilö voidaan tunnistaa suoraan tai välillisesti. Välillisesti henkilö voidaan tunnistaa esimerkiksi yhdistämällä yksittäinen tieto toiseen tietoon, joka mahdollistaa tunnistamisen. Henkilö voidaan tunnistaa esimerkiksi nimen, henkilötunnuksen tai jonkin hänelle tunnusomaisen tekijän perusteella. Lähde: <a href="https://tietosuoja.fi" target="_blank">Tietosuoja.fi</a></p>
@@ -59,7 +62,7 @@
    <p>Käyttäjän tietoihin jää merkintä siitä, että käyttäjä on sitoutunut käyttämään palvelun sisältämiä aineistoja ja aineistotietoja vain luvallisin tavoin. Katso palvelun <a href="#begin3">Käyttöehdot</a>.</p>
 
    <h3>Käyttötarkoitus</h3>
-   <p>Suomen tietosuojalaki ja muut liittyvät lait edellyttävät käyttäjää kertomaan käyttötarkoituksensa pääsyrajoitetulle aineistotiedolle ja aineistolle. Valittavissa olevat käyttötarkoitukset perustuvat lakeihin. Valittu käyttötarkoitus ei vaikuta henkilötietoa sisältävän <strong>aineistotiedon</strong> saantiin. Osa palveluun tulevista digitaalisista <strong>aineistoista</strong> voi olla pääsyrajoitettu vain osalle käyttötarkoituksista.</p>
+   <p>Suomen tietosuojalaki ja muut liittyvät lait edellyttävät käyttäjää kertomaan käyttötarkoituksensa tietosuojatulle aineistotiedolle ja aineistolle. Valittavissa olevat käyttötarkoitukset perustuvat lakeihin. Valittu käyttötarkoitus ei vaikuta henkilötietoa sisältävän <strong>aineistotiedon</strong> saantiin.  Osa palveluun tulevista <strong>digitaalisista aineistoista</strong> voi olla rajoitettu vain osalle käyttötarkoituksista.</p>
 
    <h3>Valittavissa olevat käyttötarkoitukset:</h3>
    <ul>
@@ -90,7 +93,7 @@
   <div id="begin6" class="content-section">
     <h2>Sisältö ja rajaukset</h2>
     <p>Finna Tutkijasali -palvelu sisältää tällä hetkellä pilottiaineistona käytetyt Suomalaisen Kirjallisuuden Seuran arkistoaineistojen aineistotiedot. Mukaan tulevien organisaatioiden Tiedot päivittyvät <a href="<?= $this->url('content-page', ['page' => 'tutkijasali-organisaatiot']) ?>">Organisaatiot-välilehdelle.</a></p>
-    <p>Projektin seuraavissa vaiheissa toteutetaan pääsyrajoituksia sisältävien aineistojen käyttö verkossa ja muita lisäominaisuuksia palveluun.</p>
+    <p>Projektin seuraavissa vaiheissa toteutetaan tietosuojauksia sisältävien aineistojen käyttö verkossa ja muita lisäominaisuuksia palveluun.</p>
   </div>
 
 </div>
